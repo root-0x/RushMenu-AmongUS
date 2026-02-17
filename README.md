@@ -175,7 +175,7 @@ Fonctionnent même sans être imposteur, sans cooldown, simultanément, et duran
 
 ## 🛠️ Informations techniques
 
-- **Auteur** : Slayy
+- **Auteur** : Root
 - **Version** : 3.0.1
 - **Framework** : BepInEx 6.0.0-BE-735 (Unity IL2CPP)
 - **Langage** : C# (.NET 6.0)
