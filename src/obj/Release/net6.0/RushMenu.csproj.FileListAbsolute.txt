@@ -1,0 +1,10 @@
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.csproj.AssemblyReference.cache
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.AssemblyInfoInputs.cache
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.AssemblyInfo.cs
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.csproj.CoreCompileInputs.cache
+C:\Users\root\Desktop\AmongUs Menu\Src\src\bin\Release\net6.0\RushMenu.deps.json
+C:\Users\root\Desktop\AmongUs Menu\Src\src\bin\Release\net6.0\RushMenu.dll
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\RushMenu.dll
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\refint\RushMenu.dll
+C:\Users\root\Desktop\AmongUs Menu\Src\src\obj\Release\net6.0\ref\RushMenu.dll

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <DebugType>embedded</DebugType>
+        <AssemblyName>RushMenu</AssemblyName>
+        <RootNamespace>RushMenu</RootNamespace>
+
+        <VersionPrefix>3.0.1</VersionPrefix>
+        <Description>all play and no cheats makes among us a dull game</Description>
+        <Authors>Slayy</Authors>
+    </PropertyGroup>
+
+    <!--<ItemGroup>
+        <EmbeddedResource Include=".\Assets\**" />
+    </ItemGroup>-->
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.735" Private="false" ExcludeAssets="runtime;native" />
+        <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.9.9" PrivateAssets="all" />
+
+        <PackageReference Include="BepInEx.AutoPlugin" Version="1.1.0" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.0.1" PrivateAssets="all" ExcludeAssets="runtime" />
+    </ItemGroup>
+
+    <!-- Copie vers le dossier du jeu si la variable AmongUs est définie -->
+    <Target Name="Copy" AfterTargets="Build" Condition="'$(AmongUs)' != ''">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(AmongUs)/BepInEx/plugins/" UseSymboliclinksIfPossible="true" />
+    </Target>
+
+    <!-- À chaque build : mettre à jour le dossier Steam (truc à glisser dans les fichiers Steam) -->
+    <Target Name="UpdateSteamFolder" AfterTargets="Build">
+        <PropertyGroup>
+            <_SteamPluginsPath>$(ProjectDir)..\..\Steam\BepInEx\plugins</_SteamPluginsPath>
+        </PropertyGroup>
+        <MakeDir Directories="$(_SteamPluginsPath)" Condition="!Exists('$(_SteamPluginsPath)')" />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_SteamPluginsPath)\" />
+        <Message Importance="high" Text="Steam folder updated: $(_SteamPluginsPath)\RushMenu.dll" />
+    </Target>
+</Project>
